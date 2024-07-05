@@ -1,3 +1,5 @@
+============================================================================ PANDUAN INSTALASI ====================================================================================== 
+
 1. Copy file "ca.crt" yang terdapat di folder git certs/elastic/ca.crt
 
 2. Jalankan command berikut (pilih berdasarkan platform) sebagai Administrator, ganti <PATH_ca\ca.crt> dengan lokasi path file ca.crt yang telah di copy  :
@@ -21,5 +23,24 @@
   sudo elastic-agent enroll --url=https://43.218.197.144:8220 --enrollment-token=ZjlDNGU1QUJlSld6eGIzUXFnVmI6TjFITGR1bnRTYU96bVZPdFhFUzFoQQ== -a <PATH_ca\ca.crt>
   sudo systemctl enable elastic-agent 
   sudo systemctl start elastic-agent
+
+3. Setelah instalasi selesai, check status services dengan menjalankan command berikut :
+
+    sudo elastic-agent status
+
+    Jika berhasil running, output command nya sebagai berikut :
+
+    ┌─ fleet
+    │  └─ status: (HEALTHY) Connected
+    └─ elastic-agent
+       └─ status: (HEALTHY) Running
+
+4. DONE
+
+============================================================================ PANDUAN UNINSTALL ====================================================================================== 
+
+1. Jalankan command berikut pada powershell atau commandprompt sebagai Administrator :
+
+    sudo elastic-agent uninstall --uninstall-token c160113181dd1a9def8fb76bb61b8695
 
   
