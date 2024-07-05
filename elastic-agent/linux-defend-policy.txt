@@ -1,0 +1,25 @@
+1. Copy file "ca.crt" yang terdapat di folder git certs/elastic/ca.crt
+
+2. Jalankan command berikut (pilih berdasarkan platform) sebagai Administrator, ganti <PATH_ca\ca.crt> dengan lokasi path file ca.crt yang telah di copy  :
+
+  ========================================= Linux Tar ==========================================================================
+    curl -L -O https://artifacts.elastic.co/downloads/beats/elastic-agent/elastic-agent-8.14.2-linux-x86_64.tar.gz
+    tar xzvf elastic-agent-8.14.2-linux-x86_64.tar.gz
+    cd elastic-agent-8.14.2-linux-x86_64
+    sudo ./elastic-agent install --url=https://43.218.197.144:8220 --enrollment-token=ZjlDNGU1QUJlSld6eGIzUXFnVmI6TjFITGR1bnRTYU96bVZPdFhFUzFoQQ== -a <PATH_ca\ca.crt>
+
+  ========================================= RPM ==========================================================================
+  curl -L -O https://artifacts.elastic.co/downloads/beats/elastic-agent/elastic-agent-8.14.2-x86_64.rpm
+  sudo rpm -vi elastic-agent-8.14.2-x86_64.rpm
+  sudo elastic-agent enroll --url=https://43.218.197.144:8220 --enrollment-token=ZjlDNGU1QUJlSld6eGIzUXFnVmI6TjFITGR1bnRTYU96bVZPdFhFUzFoQQ== -a <PATH_ca\ca.crt>
+  sudo systemctl enable elastic-agent 
+  sudo systemctl start elastic-agent 
+
+  ========================================= DEB ==========================================================================
+  curl -L -O https://artifacts.elastic.co/downloads/beats/elastic-agent/elastic-agent-8.14.2-amd64.deb
+  sudo dpkg -i elastic-agent-8.14.2-amd64.deb
+  sudo elastic-agent enroll --url=https://43.218.197.144:8220 --enrollment-token=ZjlDNGU1QUJlSld6eGIzUXFnVmI6TjFITGR1bnRTYU96bVZPdFhFUzFoQQ== -a <PATH_ca\ca.crt>
+  sudo systemctl enable elastic-agent 
+  sudo systemctl start elastic-agent
+
+  
