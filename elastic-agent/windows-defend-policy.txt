@@ -1,0 +1,9 @@
+1. Copy file "ca.crt" yang terdapat di folder git certs/elastic/ca.crt
+
+2. Jalankan command berikut pada powershell atau commandprompt sebagai Administrator, ganti <PATH_ca\ca.crt> dengan lokasi path file ca.crt yang telah di copy  :
+
+    $ProgressPreference = 'SilentlyContinue'
+    Invoke-WebRequest -Uri https://artifacts.elastic.co/downloads/beats/elastic-agent/elastic-agent-8.14.2-windows-x86_64.zip -OutFile elastic-agent-8.14.2-windows-x86_64.zip
+    Expand-Archive .\elastic-agent-8.14.2-windows-x86_64.zip -DestinationPath .
+    cd elastic-agent-8.14.2-windows-x86_64
+    .\elastic-agent.exe install --url=https://43.218.197.144:8220 --enrollment-token=YWRNcGZaQUJlSld6eGIzUWUtQ2c6aDFRMUVua3NRVGl0VGNXbHZCQ0FuQQ== -a <PATH_ca\ca.crt>
