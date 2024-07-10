@@ -1,0 +1,11 @@
+======================= Uninstall Winlogbeat =======================================
+1. Matikan services "winlogbeat"
+2. Run PowerShell as administrator
+3. cd ke path lokasi winlogbeat, misal cd C:\Program Files\Winlogbeat --> lokasi/ path tergantung lokasi penyimpanan winlogbeat
+4. Uninstall winlogbeat :
+  a. Jika WIN Server :
+      .\uninstall-service-winlogbeat.ps1
+  b. Jika WIN10 :
+      PowerShell.exe -ExecutionPolicy Unrestricted -File .\uninstall-service-winlogbeat.ps1
+5. Done
+6. Hapus file winlogbeat dari C:\Program Files\
