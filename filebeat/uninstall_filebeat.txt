@@ -1,0 +1,14 @@
+================================== Uninstall Filebeat ===========================================
+1. Buka prompt linux, masuk sebagai root :
+    sudo su
+    
+2. Stop services filebeat :
+    systemctl stop filebeat
+    
+3. Disable services filebeat :
+    systemctl disable filebeat
+    
+4. Remove filebeat :
+    sudo yum remove filebeat
+
+5. Done
