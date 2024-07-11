@@ -1,3 +1,7 @@
+Digunakan untuk :
+Centos 7
+Centos 8
+SLES 15
 ============================================================================ PANDUAN INSTALASI ====================================================================================== 
 
 1. Copy file "ca.crt" yang terdapat di folder git certs/elastic/ca.crt
