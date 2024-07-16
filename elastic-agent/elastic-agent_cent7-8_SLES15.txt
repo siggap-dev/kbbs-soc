@@ -11,7 +11,7 @@ SLES 15
   ========================================= Linux Tar ==========================================================================
     curl -L -O https://artifacts.elastic.co/downloads/beats/elastic-agent/elastic-agent-7.17.22-linux-x86_64.tar.gz
     tar xzvf elastic-agent-7.17.22-linux-x86_64.tar.gz
-    cd eelastic-agent-7.17.22-linux-x86_64
+    cd elastic-agent-7.17.22-linux-x86_64
     sudo ./elastic-agent install --url=https://43.218.197.144:8220 --enrollment-token=ZjlDNGU1QUJlSld6eGIzUXFnVmI6TjFITGR1bnRTYU96bVZPdFhFUzFoQQ== -a <PATH_ca\ca.crt>
 
   ========================================= RPM ==========================================================================
