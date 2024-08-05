@@ -2,7 +2,7 @@
 
 sudo rpm --import https://packages.elastic.co/GPG-KEY-elasticsearch
 cd /etc/yum.repos.d/
-curl https -o elastic.repo
+curl https://raw.githubusercontent.com/siggap-dev/kbbs-soc/main/filebeat/elastic.repo -o elastic.repo
 cd
 sudo yum install filebeat
 mkdir /root/certs/elasticsearch
@@ -12,5 +12,6 @@ curl https://raw.githubusercontent.com/siggap-dev/siem-siggap/main/kbbs-siem/cer
 cd
 cd /etc/filebeat/
 rm -f filebeat.yml
+curl https://raw.githubusercontent.com/siggap-dev/kbbs-soc/main/filebeat/filebeat.yml -o filebeat.yml
 
 
