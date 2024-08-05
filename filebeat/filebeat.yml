@@ -146,7 +146,7 @@ output.elasticsearch:
   protocol: "https"
 
   # Authentication credentials - either API key or username/password.
-  api_key: "z5XlIJEB-Wh6P4RoUabq:27vUL03sSROXKpsJEcRJeg"
+  api_key: "H75tIZEB-Wh6P4RomIDM:0USYmLQPSeiIPyhjr3xz4w"
 
 
 # ------------------------------ Logstash Output -------------------------------
