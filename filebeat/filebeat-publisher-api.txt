@@ -1,6 +1,0 @@
-{
-  "id": "H75tIZEB-Wh6P4RomIDM",
-  "name": "filebeat-publisher",
-  "api_key": "0USYmLQPSeiIPyhjr3xz4w",
-  "encoded": "SDc1dElaRUItV2g2UDRSb21JRE06MFVTWW1MUVBTZWlJUHloanIzeHo0dw=="
-}
